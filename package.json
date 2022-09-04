@@ -4,14 +4,16 @@
   "description": "(주)살린 선발과제",
   "main": "server.js",
   "scripts": {
+    "initialize": "NODE_ENV=initialize nodemon",
     "start": "nodemon"
   },
   "keywords": [
-    "강의정보"
+    "게시판"
   ],
   "author": "KCH6937",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.27.2",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "cors": "^2.8.5",
