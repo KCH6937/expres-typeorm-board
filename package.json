@@ -4,7 +4,7 @@
   "description": "(주)살린 선발과제",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon"
+    "start": "nodemon"
   },
   "keywords": [
     "강의정보"
