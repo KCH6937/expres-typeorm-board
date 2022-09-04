@@ -1,9 +1,10 @@
-# salin_assignment
+# SALIN_ASSIGNMENT
 ## 1. 프로젝트 구조
 ```bash
 ├── src             # 소스 폴더
     ├── controllers     # API 요청/응답 실행
     ├── entities        # Model과 동일
+    ├── interfaces      # interface 모음
     ├── modules         # 사용자 지정 모듈(http status 및 http message 등의 정보)
     ├── routes          # 요청에 따른 분리
     ├── services        # 데이터 가공(서버 저장소와 관련된 기능)
@@ -24,10 +25,10 @@
 4. 댓글 및 대댓글은 기본적으로 날짜순으로 정렬됩니다.
 
 ### II. DB 설계
-<img width="1031" alt="스크린샷 2022-09-03 오후 4 22 10" src="https://user-images.githubusercontent.com/48710060/188260518-7ecb22e6-373e-4e28-a532-d18c92db9e04.png">
+<img width="800" alt="스크린샷 2022-09-03 오후 4 22 10" src="https://user-images.githubusercontent.com/48710060/188260518-7ecb22e6-373e-4e28-a532-d18c92db9e04.png">
 
 ### III. API 명세
-<img width="731" alt="스크린샷 2022-09-03 오후 4 22 46" src="https://user-images.githubusercontent.com/48710060/188260548-616cd689-bc27-4cf4-8d7e-9f6a7c91222c.png">  
+<img width="800" alt="스크린샷 2022-09-05 오전 12 07 39" src="https://user-images.githubusercontent.com/48710060/188320398-b058816a-5f6a-4d70-b2e1-d217111e43af.png">
 
 - API 명세서 전체보기 링크  
 https://docs.google.com/spreadsheets/d/e/2PACX-1vSucQ3qDL5XP6j0Z-PNJ6ZUG40tvWpF3TfNFvvU6C9G0Icg9Hew_WTFrpVGvqW3icJl0NsTcXNcgWIF/pubhtml
