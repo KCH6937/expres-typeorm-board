@@ -30,10 +30,8 @@
     },
     "strictPropertyInitialization": false
   },
-  "include": [
-    "./src/**/*" // build 시 포함
-  ],
-  "exclude": [
-    "node_modules" // build 시 제외
-  ]
+  // build 시 포함
+  "include": ["./src/**/*"],
+  // build 시 제외
+  "exclude": ["node_modules"]
 }
