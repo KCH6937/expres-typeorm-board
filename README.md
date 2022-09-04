@@ -12,7 +12,7 @@ DB_PASSWORD = DB 비밀번호
 
 DB_NAME = DB명
 ```
-처음으로 서버 실행 시 ```npm run intialize```로 실행 부탁드립니다.  
+**처음으로 서버 실행 시 ```npm run intialize```로 실행 부탁드립니다.**  
 그 후 실행은 ```npm start```로 해주시면 됩니다.
 
 ## 1. 프로젝트 구조
