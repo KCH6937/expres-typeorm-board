@@ -86,24 +86,28 @@ const getBoardDetail = async (boardId: number) => {
       return fail(status.BAD_REQUEST, message.INVALID_BOARD_INFO);
     }
 
-    const comments: CommentList[] = await Comment.createQueryBuilder()
+    const comments: CommentList[] | [] = await Comment.createQueryBuilder()
       .select(['Comment.id', 'Comment.content', 'Comment.created_at'])
       .where('board_id = :boardId', { boardId })
       .orderBy('created_at', 'ASC')
       .getMany();
 
     const commentIds = comments.map((item) => item.id);
+    console.log('adasdasdasdasdsad', commentIds);
+    if (commentIds.length > 0) {
+      const replies: Reply[] | [] = await Reply.createQueryBuilder()
+        .select()
+        .where('comment_id IN (:...commentIds)', { commentIds })
+        .orderBy('created_at', 'ASC')
+        .getMany();
 
-    const replies: Reply[] = await Reply.createQueryBuilder()
-      .select()
-      .where('comment_id IN (:...commentIds)', { commentIds })
-      .orderBy('created_at', 'ASC')
-      .getMany();
-
-    for (let i = 0; i < comments.length; i++) {
-      comments[i].replies = replies.filter(
-        (item) => item.commentId === comments[i].id
-      );
+      if (replies) {
+        for (let i = 0; i < comments.length; i++) {
+          comments[i].replies = replies.filter(
+            (item) => item.commentId === comments[i].id
+          );
+        }
+      }
     }
 
     boardDetail.comment_list = comments;
