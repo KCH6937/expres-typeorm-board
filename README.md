@@ -5,6 +5,7 @@
     ├── controllers     # API 요청/응답 실행
     ├── entities        # Model과 동일
     ├── interfaces      # interface 모음
+    ├── middlewares     # 사용자 지정 미들웨어
     ├── modules         # 사용자 지정 모듈(http status 및 http message 등의 정보)
     ├── routes          # 요청에 따른 분리
     ├── services        # 데이터 가공(서버 저장소와 관련된 기능)
