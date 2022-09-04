@@ -1,4 +1,20 @@
 # SALIN_ASSIGNMENT
+## * 실행 방법
+- .env 파일
+```bash
+PORT = 서버 포트번호
+
+DB_HOST = localhost
+
+DB_USERNAME = DB 유저명
+
+DB_PASSWORD = DB 비밀번호
+
+DB_NAME = DB명
+```
+처음으로 서버 실행 시 ```npm run intialize```로 실행 부탁드립니다.  
+그 후 실행은 ```npm start```로 해주시면 됩니다.
+
 ## 1. 프로젝트 구조
 ```bash
 ├── src             # 소스 폴더
@@ -8,8 +24,7 @@
     ├── middlewares     # 사용자 지정 미들웨어
     ├── modules         # 사용자 지정 모듈(http status 및 http message 등의 정보)
     ├── routes          # 요청에 따른 분리
-    ├── services        # 데이터 가공(서버 저장소와 관련된 기능)
-    └── tests           # Jest 테스팅 폴더, 여러 테스트 파일들 저장
+    └── services        # 데이터 가공(서버 저장소와 관련된 기능)
 ```
 ## 2. 사용 기술
 ### Backend 
