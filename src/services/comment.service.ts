@@ -1,7 +1,7 @@
 import status from '@modules/status.module';
 import message from '@modules/message.module';
 import { success, fail } from '@modules/response.module';
-import AppDataSource from '@configs/dataSource';
+import AppDataSource from '@configs/data-source.config';
 import { User } from '@entities/user.entity';
 import { Board } from '@entities/board.entity';
 import { Comment } from '@entities/comment.entity';
@@ -20,13 +20,13 @@ const createComment = async (
       return fail(status.BAD_REQUEST, message.INVALID_USER_INFO);
     }
 
-    const result: Success | Fail = await boardService.getBoardDetail(boardId);
+    const board: Board | null = await Board.createQueryBuilder()
+      .select()
+      .where('id = :boardId', { boardId })
+      .getOne();
 
-    let board: Board;
-    if (result.status !== 200) {
-      return result;
-    } else {
-      board = result.data;
+    if (!board) {
+      return fail(status.BAD_REQUEST, message.INVALID_BOARD_INFO);
     }
 
     await AppDataSource.createQueryBuilder()

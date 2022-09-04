@@ -2,7 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import cors from 'cors';
 import 'dotenv/config';
-import AppDataSource from '@configs/dataSource';
+import AppDataSource from '@configs/data-source.config';
 import routes from '@routes/index';
 
 const app = express();

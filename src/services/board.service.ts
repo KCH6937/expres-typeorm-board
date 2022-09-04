@@ -1,7 +1,7 @@
 import status from '@modules/status.module';
 import message from '@modules/message.module';
 import { success, fail } from '@modules/response.module';
-import AppDataSource from '@configs/dataSource';
+import AppDataSource from '@configs/data-source.config';
 import { Board } from '@entities/board.entity';
 import { User } from '@entities/user.entity';
 import userService from '@services/user.service';

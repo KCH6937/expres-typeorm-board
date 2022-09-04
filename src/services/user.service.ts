@@ -1,7 +1,7 @@
 import status from '@modules/status.module';
 import message from '@modules/message.module';
 import { success, fail } from '@modules/response.module';
-import AppDataSource from '@configs/dataSource';
+import AppDataSource from '@configs/data-source.config';
 import { User } from '@entities/user.entity';
 
 const getUserByName = async (userName: string): Promise<User | null> => {
