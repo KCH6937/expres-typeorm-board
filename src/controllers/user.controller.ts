@@ -6,7 +6,7 @@ const signup = async (req: Request, res: Response) => {
 
   const result = await userService.signup(name);
 
-  if (result.isSuccess) {
+  if (result.status === 201) {
     return res.status(result.status).send(result);
   } else {
     console.error(result);
